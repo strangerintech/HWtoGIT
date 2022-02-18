@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk-ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантичні елементи</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#browser-support">Підтримка браузерів</a></li>
+            <li><a href="#new-elements">Нові семантичні елементи в HTML5</a></li>
+            <li><a href="#sectn">HTML5 &ltsection&gt елемент</a></li>
+            <li><a href="#artcl">HTML5 &ltarticle&gt елемент</a></li>
+            <li><a href="#hdr">HTML5 &ltheader&gt елемент</a></li>
+            <li><a href="#ftr">HTML5 &ltfooter&gt елемент</a></li>
+            <li><a href="#CV">CV</a></li>
+            <li><a href="#youtubevid">VIdeo-example</a></li>
+        </ul>
+    </nav>
+
+    <article>
+
+        <section>
+            <h2>HTML5 Семантичні елементи</h2>
+            <p>Семантичний елемент чітко описує його значення як для браузера, так і <br>
+                для розробника.
+            </p>
+            <p>Приклади не <b>семантичних</b> елементів: &ltdiv&gt і &ltspan&gt - нічого не говорить <br>
+                про його вміст.
+            </p>
+            <p>Приклади <strong>семантичних</strong> елементів: &ltform&gt &ltable&gt і &ltarticle&gt - чітко <br>
+                визначає його зміст.
+            </p>
+        </section>
+
+        <section id="browser-support">
+            <h2>Підтримка браузерів</h2>
+            <img src="assets/images/logo.jpg" alt="browser-logos">
+            <p>
+                Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.
+            </p>
+            <p>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідомі <br>
+                елементи".
+            </p>
+            <p>
+                Прочитайте про це в <a
+                    href="https://www.blogger.com/blog/page/edit/2590532390801722394/850003172824707311#">підтримці
+                    браузера HTML5 .</a>
+            </p>
+        </section>
+
+        <section id="new-elements">
+            <h2>Нові семантичні елементи в HTML5</h2>
+            <ul>
+                <li>&ltsection&gt</li>
+                <li>&ltarticle&gt</li>
+                <li>&ltheader&gt</li>
+                <li>&ltfooter&gt</li>
+            </ul>
+        </section>
+
+        <section id="sectn">
+            <h2>HTML5 &ltsection&gt елемент</h2>
+
+            <p> Елемент &ltsection&gt визначає розділ в документі.</p>
+            <p>Згідно з документацією в3к'с HTML5: "розділ представляє собою <br>
+                тематичну угруповання контенту, зазвичай з заголовком".
+            </p>
+            <p>Домашня сторінка зазвичай може бути розділена на розділи для<br>
+                ознайомлення, змісту і контактної інформації.
+            </p>
+            <img src="assets/images/section-demo.jpg" alt="section-demo">
+        </section>
+
+
+        <section id="artcl">
+            <h2>HTML5 &ltarticle&gt елемент</h2>
+            <p>
+                Елемент &ltarticle&gt визначає незалежний, автономний вміст.
+            </p>
+            <p>
+                Стаття повинна мати сенс самостійно, і вона повинна мати можливість <br>
+                читати його незалежно від іншої частини веб-сайту.
+            </p>
+            <p>
+                Приклади того, де можна використовувати елемент &ltarticle&gt:
+            </p>
+            <ul>
+                <li>Повідомлення на форумі</li>
+                <li>блозі</li>
+                <li>Газетна стаття</li>
+            </ul>
+            <img src="assets/images/article-demo.jpg" alt="article-demo">
+        </section>
+
+        <section id="hdr">
+            <h2>HTML5 &ltheader&gt елемент</h2>
+            <p>
+                Елемент &ltheader&gt задає заголовок для документа або розділу.
+            </p>
+            <p>
+                Елемент &ltheader&gt повинен використовуватися в якості контейнера для <br>
+                вступного змісту.
+            </p>
+
+            <p>В одному документі може бути кілька елементів &ltheader&gt.</p>
+            <p>У наступному прикладі визначається заголовок для статті:</p>
+            <img src="assets/images/header-demo.jpg" alt="header-demo">
+        </section>
+
+        <section id="ftr">
+            <h2>HTML5 &ltfooter&gt елемент</h2>
+            <p>Елемент &ltfooter&gt вказує нижній колонтитул для документа або розділу.</p>
+            <p>
+                Нижній колонтитул зазвичай містить автора документа, інформацію про <br>
+                авторське право, посилання на умови використання, контактні дані і т.д.
+            </p>
+            <p>В одному документі може бути кілька елементів &ltfooter&gt.</p>
+            <img src="assets/images/footer-demo.jpg" alt="footer-demo">
+        </section>
+    </article>
+
+    <br><br><br><br><br>
+
+
+
+    <article id="CV">
+        <h2>CV</h2>
+        <iframe src="assets/html/CV.html" width="700" height="400"></iframe>
+    </article>
+
+    <br><br><br><br><br>
+        
+        <h2>Video-example</h2>
+        <iframe id="youtubevid" width="1280" height="720" src="https://www.youtube.com/embed/2bXP5VNukmY" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay;     clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    <!-- в различных источниках я встречал разную информацию о том, обязателен
+        ли заголовок в <article> и <section>, например в вебрефе пишут что в <article> обязателен,
+            а про <section> такого нет, а на доке - ровно наоборот... короче непонятно...
+        Да, я помню что ты сказал вроде что и там и там нужен, но в этой работе в самом верхнем
+         <article> я не сделал ни одного заголовка, поскольку просто не нашел для него места, вернее у меня нет заголовка для него.
+            По смысловой логике, насколько я пониял - надо было сделать одну большую статью и уже
+        делить ее на секции...в общем прокомментируй пожалуйста этот момент.
+        В конце принудительно создал дополнительный article чтобы повесить на него якорь и добавить в него заголовок
+        В валидаторе прогонял, что-то не так со спец символами (знаки <>), как будто валидатор их не знает, и ругается на iframe
+        - пишет что устарел и предлагает юзать CSS вместо него..оставил как есть, поскольку чем заменить я пока не знаю   -->
+</body>
+
+</html>
