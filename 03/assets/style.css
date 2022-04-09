@@ -1,10 +1,12 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -13,14 +15,8 @@ body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
     color: #070707;
-    font-size: 16px;
 }
 
-img {
-    width: 100%;
-    vertical-align: top;
-
-}
 
 .container {
     width: 90%;
@@ -29,23 +25,21 @@ img {
 }
 
 #header {
-     height: 75px;
+    height: 75px;
 }
+
 
 #header .container {
     border-bottom: 1px solid #828282;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-
 }
 
-
-/*Почему padding 30px 0; применяется только к самому блоку UL при этом к каждой <li> не применяется, они же вложенные и должны наследовать стили UL ? */
 #main-menu ul {
     text-align: center;
     padding: 30px 0;
 }
 
-#main-menu ul li{
+#main-menu ul li {
     display: inline-block;
     margin: 0 20px;
 }
@@ -54,18 +48,18 @@ img {
     font-size: 18px;
     line-height: 25px;
     color: #828282;
-    text-decoration: none;   
+    text-decoration: none;
 }
-
-a {
-    font-size: 18px;
-    line-height: 25px;
-    color: #070707;
-}
-
 
 #main-menu ul li a.active,
 #main-menu ul li a:hover {
+    color: #070707;
+}
+
+p {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
     color: #070707;
 }
 
@@ -81,13 +75,20 @@ a {
     padding: 33px 0 100px;
 }
 
+/* ты объяснил на уроке "чтобы картинки растягивались по ширине родителя", 
+Вопрос: а почему оно не занимает ширину родителя по умполчанию,
+ведь оно находится итак в .container?  */
+.first-screen img {
+    width: 100%;
+    vertical-align: top;
+}
+
 section {
     padding: 100px 0;
 }
 
-
 h1 {
-    font-size: 47px;
+    font-size: 47.3392px;
     line-height: 64px;
     margin-bottom: 38px;
 }
@@ -99,96 +100,48 @@ h2 {
     margin-bottom: 28px;
 }
 
-h3 {
-    text-align: center;
-    font-size: 22px;
-    line-height: 38px;
-    margin-bottom: 28px;
-}
-
-
-
-.content p {
-    margin-bottom: 40px;
-}
-
-/* Лютый костыль, но не мог вспомнить что лучше, про чайлды еще не очень знаю */
-.content .last {
-    margin-bottom: 0;
-}
-
-
 .content {
     width: 480px;
     margin: 0 auto;
     text-align: center;
 }
 
-.skills {
-    margin: 0 auto; /* почему это не работает? а в предыдущем .content работает?
-    здесь работает  только если жестко задать ширину, а почему? Ведь <p> блочный
-    и находется в блоке див, а значит должен внутри него двигаться ? */
-    text-align: center;
-    
+.content p {
+    margin-bottom: 40px;
 }
-.skills p {
+
+/* после последнего абзаца нет отступа вниз 40 пкс, поэтому обнуляем */
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.third-screen-white p {
+    text-align: center;
     margin-bottom: 78px;
 }
 
-/* .icons {
-    width: 167px;
-    height: 224px;
-    margin-right: 65px;
-    
-} 
-Почему так не работает наследование, чтобы к картинком применялось все, что описано
-для класса icons?
-*/
-
-
-/* Так уже работает, но не понял, как значки раскидать правильно,
-вроде бы по макету расстояние между иконками 90 пикселей, у меня больше 
-65 не получается, перекидывает на следующий ряд, у меня блок
-icons в блоке контейнер, т.е. должен от него наследовать ширину правильно? */
-
-.icons img {
-    width: 167px;
-    height: 224px;
-    margin-right: 64px;
+/* Вопрос :Как сделать так, чтобы иконки были в ряд?
+По макету между картинками 90 px, но я вынужденно поставил 85,
+чтобы они влезли, очень застрял здесь, как без флексов сделать? */
+.icons ul li {
+    display: inline-block;
+    width: 166.46px;
+    height: 223.73px;
+    margin-right: 85px;
 }
 
-
-.fourth-screen-gray h2 {
-    margin-bottom: 8px;
+/* После последней картинки нет отступа, поэтмоу убрал */
+.icons ul li:last-child {
+    margin-right: 0;
 }
 
-.fourth-screen-gray p {
-    margin-top: 75px;
-    text-align: center;
+a {
+    line-height: 25px;
+    text-decoration-line: underline;
+    color: #070707;
+    font-weight: 400;
 }
 
-.promo {
-    padding-top: 0;
-    text-align: center;
-    padding-bottom: 136px;
-}
-
-.promo p {
-    margin-top: 8px;
-}
-
-.portable {
-    padding-top: 0;
-}
-
-.portable p {
-    text-align: center;
-    margin-top: 8px;
-}
-
-.contacts {
-    padding-top: 87px;
-}
 .foo {
     width: 340px;
     height: 411px;
@@ -207,19 +160,42 @@ icons в блоке контейнер, т.е. должен от него нас
     width: 180px;
     height: 42px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background-color: #000;
+    background-color: #070707;
     border-radius: 42px;
-    margin-bottom: 17px;
+    margin-bottom: 31px;
     border: solid;
-
+    font-weight: 700;
+    /* указываю размер шрифта как в макете, но 
+    при 18px слишком большой получается, надо где-то
+    15px */
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #FFF;
 }
 
-/* Не нашел в фигме ифнормации насчет шрифта в кнопке */
-.btn h3 {
-    color: #fff;
+.foo ul li {
+    display: inline-block;
+    margin-right: 55px;
 }
-.links {
+.foo ul li:last-child {
+    margin-right: 0;
+}
+
+/* Убрал h3 и применил стили к самой кнопке, как ты и писал,
+но неполадки со шрифтом теперь...
+что не так? */
+
+/* сделал так, чтобы не давать последнему параграфу отдельный класс */
+.foo p ~ p {
     margin-top: 41px;
     color: #828282;
- 
+    font-size: 14px;
+    line-height: 19px;
 }
+
+/*  Вопрос: В инспекторе элементов при наведении
+на класс .btn указано, что содержимое класса foo отцентровано благодаря text-align: center;, при этом в инспекторе элементов это свойство перечеркнуто, типа
+оно не работает, хотя по факту если его отключить то кнопка сразу
+слетает влево. Так оно не работает или что это перечеркивание
+имеет в виду? */
